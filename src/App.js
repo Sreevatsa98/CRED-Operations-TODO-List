@@ -1,12 +1,9 @@
 import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import {
-//   faCircleCheck, faPen, faTrashCan
-// }from '@fortawesome/free-solid-svg-icons'
 
 import './App.css';
 
+//Components
 import AddTaskFrom from './components/AddTaskForm.jsx';
 import UpdateFrom from './components/UpdateForm.jsx';
 import ToDo from './components/ToDo.jsx';
@@ -16,8 +13,8 @@ function App() {
 
   //Task State
   const [toDo, setToDo] = useState([
-    {"id": 1, "title": "Task 1", "status": false},
-    {"id": 2, "title": "Task 2", "status": false}
+    {"id": 1, "title": "Walk Your Dog", "status": false},
+    {"id": 2, "title": "Learn React", "status": false}
   ]);
 
   //Temp Task
@@ -77,7 +74,7 @@ function App() {
   return (
     <div className="container App">
       <br /><br />
-      <h2>Todo List App</h2>
+      <h2 className="todo-list">Todo List Application</h2>
       <br /><br />
 
     {/* Update Task */}
@@ -90,6 +87,7 @@ function App() {
       />
     ):(
 
+      // Add New Task
       <AddTaskFrom 
         newTask={newTask}
         setNewTask={setNewTask}
@@ -99,7 +97,7 @@ function App() {
     )}
 
       {/* Display TO-DO's */}
-      {toDo && toDo.length ? '' : 'Wow! you have completed all the task'}
+      {toDo && toDo.length ? '' : 'Wow! No Task Here'}
 
       <ToDo 
         toDo={toDo}

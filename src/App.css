@@ -3,18 +3,30 @@
 }
 
 body{
-  background-color: #333;
+  background-color: #000000;
   color: #ffffff;
+  font-family: cursive;
+}
+
+.todo-list{
+  font-size: 35px;
+  box-shadow: 0px 0px 20px #15dd6fa1;
+  padding: 15px;
+}
+
+input{
+  box-shadow: 0px 0px 15px #15dd6fa1;
 }
 
 .taskBg {
-  background-color: #555;
+  background-color: rgb(0, 0, 0);
   border-radius: 6px;
   margin-bottom: 20px;
   padding: 10px 140px 10px 15px;
   text-align:  left;
   font-size: 22px;
   position: relative;
+  box-shadow: 0px 0px 15px #15dd6fa1;
 }
 
 .taskBg div {
@@ -23,12 +35,11 @@ body{
 }
 
 .taskNumber {
-  color: #999;
-  border: 1px solid #999;
+  color: #00ff89;
+  border: 1px solid #00ff89;
   border-radius: 50%;
   width: 26px;
   height: 26px;
-  display: flex;
   display: flex;
   text-align: center;
   font-size: 14px;
@@ -68,4 +79,25 @@ body{
 
 .mr-20{
   margin-right: 20px;
+}
+
+.btn-success{
+  background-color: #00ff89;
+  color: black;
+}
+
+.btn-success:hover{
+  background-color: #00ff88a9;
+  color: #000000;
+  box-shadow: 0px 0px 15px #15dd6fa1;
+}
+
+.btn-danger{
+  background-color: #ff0019e8;
+  color: black;
+}
+
+.btn-danger:hover{
+  color: #000000;
+  box-shadow: 0px 0px 15px #ff0019e3;
 }
